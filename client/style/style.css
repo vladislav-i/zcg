@@ -45,9 +45,16 @@
   height: 10vh;
 }
 
-.hBottom {
-  height:80vh;
+.hMid {
+  height: 10vh;
 }
+
+.hBottom {
+  height:70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 
 
 

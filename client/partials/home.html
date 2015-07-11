@@ -1,9 +1,9 @@
 <div class="hTop row"></div>
-<div class ="hBottom">
+<div class ="hMid">
   <!-- add announcement -->
-  <div>
+  <div class="col-xs-12" >
     <form>
-      <div class="col-xs-6 row">
+      <div class="col-xs-offset-3 col-xs-6">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Announcement goes here" type="text" ng-model="$parent.formTodoText" ng-model-instant/>
           <span class="input-group-btn">
@@ -16,15 +16,16 @@
       </div>
     </form>
   </div>
-
+</div>
+<div class ="hBottom">
   <!-- show announcements -->
-  <div class="row">
+  <div class="col-xs-offset-1 col-xs-10" >
     <ul>
-      <div ng-repeat="todo in todos">
-        <input type="checkbox" ng-model="todo.done"/>
-        <span class="done-{{todo.done}}">{{todo.text}}</span>
+      <div ng-repeat="each in data">
+        <span class="done-{{todo.done}}">
+        <input type="checkbox" ng-model="each.done" ng-click="checked(each)"/>
+          {{each.text}}</span>
       </div>
     </ul>
   </div>
-  
 </div>
