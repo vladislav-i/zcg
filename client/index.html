@@ -1,0 +1,32 @@
+<html lang="en" ng-app="website">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+    <script src="js/controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  
+    <title> ZCG SERVICE</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body ng-controller ="MainCtrl" class="bodyStyle">
+    <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <img src ="images/zcg.gif" id = "zcg">
+        <div class="navLinks">
+          <a href="#/home" class="eachNavLink">Announcement</a>
+          <a href="#/about" class="eachNavLink">Daily Jobs</a>
+          <a href="#/projects" class="eachNavLink">Inspections</a>
+          <a href="#/contact" class="eachNavLink">Questions</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="container">
+      <div ng-view></div>
+    </div>
+  </body>
+</html>

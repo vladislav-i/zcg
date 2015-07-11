@@ -1,0 +1,30 @@
+<div class="hTop row"></div>
+<div class ="hBottom">
+  <!-- add announcement -->
+  <div>
+    <form>
+      <div class="col-xs-6 row">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Announcement goes here" type="text" ng-model="$parent.formTodoText" ng-model-instant/>
+          <span class="input-group-btn">
+            <!-- add new task -->
+            <button class="btn btn-default" ng-click="addTodo()">Add</button>
+            <!-- remove completed tasks -->
+            <button class="btn btn-default" ng-click="clearCompleted()">Clear Completed</button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- show announcements -->
+  <div class="row">
+    <ul>
+      <div ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.done"/>
+        <span class="done-{{todo.done}}">{{todo.text}}</span>
+      </div>
+    </ul>
+  </div>
+  
+</div>

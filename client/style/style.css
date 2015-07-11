@@ -1,0 +1,66 @@
+/*====================================
+              Body
+====================================*/
+.bodyStyle {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+}
+
+/*====================================
+              Nav Bar
+====================================*/
+.navLinks {
+  margin-top: 20px;
+  font-size: 16px;
+  float: right;
+}
+
+.eachNavLink {
+  margin-right: 35px;
+  text-decoration: none;
+}
+
+.eachNavLink:visited {
+  text-decoration: none;
+}
+
+.eachNavLink:hover {
+  font-weight: bolder;
+  color: red;
+  text-decoration: none;
+}
+
+.navbar {
+  height: 10vh;
+}
+
+#zcg {
+  margin-top: 2%;
+}
+
+/*====================================
+              Announcements
+====================================*/
+.hTop {
+  height: 10vh;
+}
+
+.hBottom {
+  height:80vh;
+}
+
+
+
+
+/*====================================
+              About Me
+====================================*/
+
+
+
+
+
+
+
+
+
