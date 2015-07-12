@@ -1,12 +1,48 @@
 <div class="hTop row"></div>
 <div class ="hMid">
   <div>
-  <div class="col-xs-offset-1 col-xs-10" >
-    <ul>
-      <div ng-repeat="each in job">
-        <span class="done-{{todo.done}}">
-          {{job}}</span>
-      </div>
-    </ul>
+    <button class="btn btn-default" ng-click="addJob()">Add Job</button>
+    <button class="btn btn-default" ng-click="">Remove Job</button>
   </div>
+
+
+  <div class="row">
+        <div class="col-xs-4">
+          <h2>Jobs Not Started</h2>
+          <div>
+            <ul>
+              <div ng-repeat="each in job | filter: notStarted">
+                <input type="checkbox" ng-model="each.Done" ng-click=""/>
+                <span>{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</span>
+              </div>
+            </ul>
+          </div>
+
+          
+        </div>
+        <div class="col-xs-4">
+          <h2>Jobs Pending</h2>
+           <div>
+            <ul>
+              <div ng-repeat="each in job | filter: started">
+                <input type="checkbox" ng-model="each.Done" ng-click=""/>
+                <span>{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</span>
+              </div>
+            </ul>
+          </div>
+          
+       </div>
+        <div class="col-xs-4">
+          <h2>Jobs Finished</h2>
+           <div>
+            <ul>
+              <div ng-repeat="each in job | filter: finished">
+                <input type="checkbox" ng-model="each.Done" ng-click=""/>
+                <span>{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</span>
+              </div>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
 </div>
