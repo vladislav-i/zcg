@@ -4,8 +4,6 @@ angular.module('website', ['ngRoute','firebase'])
     // defined four routes
       .when('/home', {templateUrl:'partials/home.html'})
       .when('/about', {templateUrl:'partials/about.html'})
-      .when('/projects', {templateUrl:'partials/projects.html'})
-      .when('/contact', {templateUrl:'partials/contact.html'})
       .otherwise({redirectTo: '/home', template:'partials/home.html'});
   });
 
@@ -72,6 +70,11 @@ function MainCtrl($scope, $firebaseArray, $firebaseObject) {
     var jobID = newjobRef.key();
     $scope.firstName = $scope.model = $scope.lastName = $scope.make ='';
   };
+
+  $scope.accessJob = function(job) {
+    console.log(job.$id);
+
+  }
 
   $scope.notStarted  = function(job) {
     if (job.Status === "notStarted") {

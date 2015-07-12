@@ -56,12 +56,21 @@
 }
 
 
-
-
-
 /*====================================
-              About Me
+              Jobs
 ====================================*/
+.notStarted {
+  color: red;
+}
+
+.started {
+  color: orange;
+}
+
+.finished {
+  color: green;
+}
+
 
 
 
