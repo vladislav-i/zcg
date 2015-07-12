@@ -1,6 +1,6 @@
 {
   "firebase": "zcg",
-  "public": ".",
+  "public": "client",
   "ignore": [
     "firebase.json",
     "**/.*",

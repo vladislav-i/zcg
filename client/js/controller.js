@@ -38,7 +38,7 @@ function MainCtrl($scope, $firebaseArray, $firebaseObject) {
       text: id.text,
       done: condition
     }
-    
+
     ref.child(id.$id).update(updatedTask);
   }
 
@@ -49,4 +49,13 @@ function MainCtrl($scope, $firebaseArray, $firebaseObject) {
       if($scope.data[i].done) ref.child($scope.data[i].$id).remove();
     }
   };
+
+  //Daily Jobs
+  var jobs = new Firebase("https://zcg.firebaseio.com/jobs");
+  $scope.job = $firebaseArray(jobs);
+
+  $scope.addJob = function() {
+
+  };
+
 }
