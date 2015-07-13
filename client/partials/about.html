@@ -44,21 +44,21 @@
             <ul>
               <div ng-repeat="each in job | filter: notStarted">
                 <input type="checkbox" ng-model="each.Done" ng-click=""/>
-                <span> <a href="javascript:void(0);" ng-click="accessJob(each)" class="notStarted">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
+                <span> <a href="javascript:void(0);" ng-click="accessJob(each)">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
               </div>
             </ul>
             <h5>Started</h5>
             <ul>
               <div ng-repeat="each in job | filter: started">
                 <input type="checkbox" ng-model="each.Done" ng-click=""/>
-                <span> <a href="javascript:void(0);" ng-click="accessJob(each)" class="started">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
+                <span> <a href="javascript:void(0);" ng-click="accessJob(each)">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
               </div>
             </ul>
             <h5>Finished</h5>
             <ul>
               <div ng-repeat="each in job | filter: finished">
                 <input type="checkbox" ng-model="each.Done" ng-click=""/>
-                <span> <a href="javascript:void(0);" ng-click="accessJob(each)" class="finished">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
+                <span> <a href="javascript:void(0);" ng-click="accessJob(each)">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
               </div>
             </ul>
           </div>

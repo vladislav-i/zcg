@@ -59,18 +59,29 @@
 /*====================================
               Jobs
 ====================================*/
-.notStarted {
-  color: red;
+
+
+/*====================================
+              workOrder.html
+====================================*/
+.workOrderBody {
+  width: 100%;
+  height: 600px;
+  background-color: #f8f8f8;
 }
 
-.started {
-  color: orange;
+.th {
+  text-align: center;
 }
 
-.finished {
-  color: green;
+.emptyTd{
+  height: 400px;
+
 }
 
+.table {
+
+}
 
 
 
