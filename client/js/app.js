@@ -1,5 +1,5 @@
 var zcgApp = angular.module('website', ['ngRoute','firebase', 'ui.router', 'xeditable'])
-  .config(function($routeProvider, $stateProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home',{
         url: '/home',
@@ -14,17 +14,9 @@ var zcgApp = angular.module('website', ['ngRoute','firebase', 'ui.router', 'xedi
           }
         }
       });
-      .state("otherwise", { url : '/home'});
 
-      $routeProvider.otherwise({
-            redirectTo: '/home'
-        });
+      $urlRouterProvider.when('', '/home');
   });
-
-// zcgApp.run(function(editableOptions) {
-//   editableOptions.theme = 'bs3';
-// });
-
 
 function MainCtrl($scope, $firebaseArray, $firebaseObject) {
   //firebase
