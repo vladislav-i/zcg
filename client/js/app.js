@@ -15,7 +15,7 @@ var zcgApp = angular.module('website', ['ngRoute','firebase', 'ui.router', 'xedi
         }
       });
 
-      $urlRouterProvider.when('', '/home');
+      $urlRouterProvider.otherwise('/home');
   });
 
 function MainCtrl($scope, $firebaseArray, $firebaseObject) {
