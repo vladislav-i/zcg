@@ -22,7 +22,7 @@
   <div class="col-xs-offset-1 col-xs-10" >
     <ul>
       <div ng-repeat="each in data">
-        <span class="done-{{todo.done}}">
+        <span class="each-{{each.done}}" editable-text="each.text">
         <input type="checkbox" ng-model="each.done" ng-click="checked(each)"/>
           {{each.text}}</span>
       </div>
