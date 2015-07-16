@@ -4,66 +4,46 @@
   </div>
   <br>
   <div class="col-xs-12">
-    <div class="col-xs-4">
-      <h4>Customer</h4>
-      <div>First Name:  <a href="#" editable-text="user.first">{{ user.first || 'empty' }}</a> </div>
-      <div>Last Name:  <a href="#" editable-text="user.last">{{ user.last || 'empty' }}</a> </div>
+    <div class="col-xs-3">
+      <h4> Customer: {{ user.first }} {{ user.last }} </h4>
+      <div> Vin #:  <a href="#" editable-text="car.vin">{{ car.vin || 'empty' }}</a> </div>
+      <div>Prod date:  <a href="#" editable-text="car.prod">{{ car.prod || 'empty' }}</a></div>
+      <div>Mileage:  <a href="#" editable-text="car.mlgIn">{{ car.mlgIn || 'empty' }}</a></div>
+      <div>Model:  <a href="#" editable-text="car.model">{{ car.model || 'empty' }}</a></div>
     </div>
 
-    <div class="col-xs-offset-2 col-xs-6">
-      <div>Vin #:  <a href="#" editable-text="car.vin">{{ car.vin || 'empty' }}</a> </div>
-      <div>
-        Vehicle:  <a href="#" editable-text="car.model">{{ car.model || 'empty' }}</a> 
-        &nbsp;&nbsp;
-        Lic Plate:  <a href="#" editable-text="car.licPlate">{{ car.licPlate || 'empty' }}</a> 
+
+    <div class="col-xs-offset-1 col-xs-8">
+      <h4>Test drive</h4>
+      <div>Any Codes:
       </div>
-      <div>
-        Prod:  <a href="#" editable-text="car.prod">{{ car.prod || 'empty' }}</a> 
-        &nbsp;&nbsp;
-        Color:  <a href="#" editable-text="car.color">{{ car.color || 'empty' }}</a> 
+
+      <h4>Brakes</h4>
+      <div>Brake master:</div>
+      <div>Front Rotors:</div>
+      <div>Rear Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">(Min thickness is 2mm)</span></div>
+      <div>Front Pads: <a href="#" editable-text="car.frontPads">{{ car.frontPads || 'empty' }}</a><span class ="col-xs-offset-1">(Min thickness is 2mm)</span></div>
+      <div>Rear Pads: <a href="#" editable-text="car.rearPads">{{ car.rearPads || 'empty' }}</a><span class ="col-xs-offset-1">(Min thickness is 2mm)</span></div>
+      <div>Notes:</div>
+
+      <h4>Suspension</h4>
+      <div>Any Codes:
       </div>
-      <div>
-        Mlg In:  <a href="#" editable-text="car.mlgIn">{{ car.mlgIn || 'empty' }}</a> 
-        &nbsp;&nbsp;
-        Mlg Out:  <a href="#" editable-text="car.mlgOut">{{ car.mlgOut || 'empty' }}</a> 
+
+      <h4>Engine room</h4>
+      <div>Any Codes:
       </div>
+
+      <h4>Transmission</h4>
+      <div>Any Codes:
+      </div>
+      <h4>Exterior</h4>
+      <div>Any Codes:
+      </div>
+      <h4>Misc Notes</h4>
+      <div>Any Codes:
+      </div>
+
     </div>
-    <br>
-
-
-
-
-
-      <!-- customer -->
-     <!--  <input type="text"  class="col-xs-2" ng-model="$parent.firstName" placeholder="FIRST NAME">
-      <input type="text" class="col-xs-2" ng-model="$parent.lastName" placeholder="LAST NAME"> -->
-      <!-- Vehicle -->
-   <!--     <input type="text"  class="col-xs-offset-4 col-xs-4" ng-model="$parent.firstName" placeholder="VIN NUMBER">
-       <input type="text"  class="col-xs-offset-8 col-xs-2" ng-model="$parent.firstName" placeholder="VEHICLE">
-       <input type="text"  class="col-xs-2" ng-model="$parent.firstName" placeholder="LIC PLATE">
-
-       <input type="text"  class="col-xs-offset-8 col-xs-2" ng-model="$parent.firstName" placeholder="PRODUCTION">
-       <input type="text"  class="col-xs-2" ng-model="$parent.firstName" placeholder="COLOR">
-
-       <input type="text"  class="col-xs-offset-8 col-xs-2" ng-model="$parent.firstName" placeholder="MLG IN">
-       <input type="text"  class="col-xs-2" ng-model="$parent.firstName" placeholder="MLG OUT"> -->
-      
-
-       <TABLE BORDER="1"    WIDTH="100%"   CELLPADDING="2" CELLSPACING="1">
-        <tr>
-          <th class='th'>QTY</th>
-          <th class='th'>ITEM NO</th>
-          <th class='th'>DESCRIPTION</th>
-          <th class='th'>PRICE</th>
-          <th class='th'>TOTAL</th>
-        </tr>
-        <tr>
-          <td class="emptyTd"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </TABLE>
   </div>
 </div>

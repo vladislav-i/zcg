@@ -59,6 +59,9 @@
 /*====================================
               Jobs
 ====================================*/
+#myModalLabel {
+  text-align: center;
+}
 
 
 /*====================================
@@ -70,18 +73,11 @@
   background-color: #f8f8f8;
 }
 
-.th {
-  text-align: center;
+.inpectInfo {
+  margin-right: 10%;
 }
 
-.emptyTd{
-  height: 400px;
 
-}
-
-.table {
-
-}
 
 
 
