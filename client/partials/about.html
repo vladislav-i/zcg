@@ -36,24 +36,6 @@
     </div>
   </div>
 
-
-   <!-- workOrder Modal -->
-  <div class="modal fade bs-example-modal-lg" id="myWorkOrder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">2003 - 2006 G35 Coupe and Sedan / Z33 Coupe</h4>
-        </div>
-          <div ui-view="workOrder"></div> 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="">Update</button>
-        </div>
-    </div>
-  </div>
-
   <div class="row">
         <div class="col-xs-4">
           <h2>Jobs</h2>
@@ -62,7 +44,10 @@
             <ul>
               <div ng-repeat="each in job | filter: notStarted">
                 <input type="checkbox" ng-model="each.Done" ng-click="checkedJobs(each)"/>
-                <span> <a href="javascript:void(0);" ng-click="accessJob(each)" data-toggle="modal" data-target="#myWorkOrder">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a></span>
+                <span> 
+                  <a href="#/inspection" ng-click="accessJob(each)">{{each.FirstName}} {{each.LastName}} - {{each.Make}} {{each.Model}}</a>
+
+                </span>
               </div>
             </ul>
             <h5>Started</h5>

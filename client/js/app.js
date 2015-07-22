@@ -13,6 +13,10 @@ var zcgApp = angular.module('website', ['ngRoute','firebase', 'ui.router', 'xedi
             templateUrl: 'partials/workOrder.html'
           }
         }
+      })
+      .state('inspection',{
+        url: '/inspection',
+        templateUrl:'partials/inspection.html'
       });
 
       $urlRouterProvider.otherwise('/home');
@@ -146,6 +150,17 @@ function MainCtrl($scope, $firebaseArray, $firebaseObject) {
 
   ///- - - WORK ORDER - - -///
 
- 
+  //brakes selection
+  $scope.options = [{ name: "BREMBO", id: 1 }, { name: "NON BREMBO", id: 2 }];
+  $scope.selectedOption = $scope.options[1];
+
+  //brake type min thickness
+  if ($scope.options[1]) {
+    $scope.fRotor = "Min thickness is 28.4 MM";
+    $scope.rRotor = "Min thickness is 20.2 MM";
+  } else {
+    $scope.fRotor = "Min thickness is 22 MM";
+    $scope.rRotor = "Min thickness is 14 MM";
+  }
 
 }
