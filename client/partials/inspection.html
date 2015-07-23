@@ -8,45 +8,116 @@
       <div>Prod date:  <a href="#" editable-text="car.prod">{{ car.prod || 'empty' }}</a></div>
       <div>Mileage:  <a href="#" editable-text="car.mlgIn">{{ car.mlgIn || 'empty' }}</a></div>
       <div>Model:  <a href="#" editable-text="car.model">{{ car.model || 'empty' }}</a></div>
+
+      <h4>Tech</h4>
+      <div> Tech Name:
+      </div>
     </div>
     <div class="col-xs-offset-1 col-xs-8">
       <h4 >Test drive</h4>
       <div class="col-xs-offset-1">Any Codes: <a href="#" editable-text="car.codes">{{ car.codes || 'empty' }}</a>
       </div>
 
-      <h4>Brakes - <select data-ng-options="o.name for o in options" data-ng-model="selectedOption"></select></h4> 
-      <div class="col-xs-offset-1">Brake master: </div>
-      <div class="col-xs-offset-1">Front Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{fRotor}}</span></div>
-      <div class="col-xs-offset-1">Rear Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{rRotor}}</span></div>
-      <div class="col-xs-offset-1">Front Pads: <a href="#" editable-text="car.frontPads">{{ car.frontPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
-      <div class="col-xs-offset-1">Rear Pads: <a href="#" editable-text="car.rearPads">{{ car.rearPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
-      <div class="col-xs-offset-1">Notes: <a href="#" editable-text="car.brakeNotes">{{ car.brakeNotes || 'empty' }}</a></div>
+      <h4>Brakes - <select data-ng-options="o.name for o in options" data-ng-model="selectedOption"></select></h4>
+      <div class="col-xs-offset-1"> 
+        <div>Brake master: </div>
+        <div>Front Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{fRotor}}</span></div>
+        <div>Rear Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{rRotor}}</span></div>
+        <div>Front Pads: <a href="#" editable-text="car.frontPads">{{ car.frontPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
+        <div>Rear Pads: <a href="#" editable-text="car.rearPads">{{ car.rearPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
+        <div>Notes: <a href="#" editable-text="car.brakeNotes">{{ car.brakeNotes || 'empty' }}</a></div>
+      </div>
 
       <h4>Suspension</h4>
-      <div>Shocks and springs: <a href="#" editable-text="car.shocksSprings">{{ car.shocksSprings || 'empty' }}</a>
-      </div>
-      <div>Front control arms: <a href="#" editable-text="car.fArms">{{ car.fArms || 'empty' }}</a>
-      </div>
-      <div>Front tires: <a href="#" editable-text="car.fTires">{{ car.fTires || 'empty' }}</a>
-      </div>
-      <div>Rear tires: <a href="#" editable-text="car.rTires">{{ car.rTires || 'empty' }}</a>
-      </div>
-      <div>Rear suspension: <a href="#" editable-text="car.rSuspension">{{ car.rSuspension || 'empty' }}</a>
+      <div class="col-xs-offset-1"> 
+        <div>Shocks and springs: <a href="#" editable-text="car.shocksSprings">{{ car.shocksSprings || 'empty' }}</a>
+        </div>
+        <div>Front control arms: <a href="#" editable-text="car.fArms">{{ car.fArms || 'empty' }}</a>
+        </div>
+        <div>Front tires: <a href="#" editable-text="car.fTires">{{ car.fTires || 'empty' }}</a>
+        </div>
+        <div>Rear tires: <a href="#" editable-text="car.rTires">{{ car.rTires || 'empty' }}</a>
+        </div>
+        <div>Rear suspension: <a href="#" editable-text="car.rSuspension">{{ car.rSuspension || 'empty' }}</a>
+        </div>
       </div>
 
 
       <h4>Engine room</h4>
-      <div>Any Codes:
+      <div class="col-xs-offset-1"> 
+        <div>All EFI connections:
+        </div>
+        <div>Coolant hoses:
+        </div>
+        <div>P/S hoses:
+        </div>
+        <div>Fuel Dampner on intake:
+        </div>
+        <div>Valve cover gaskets:
+        </div>
+        <div>Coolant hoses:
+        </div>
+        <div>Drive belts:
+        </div>
+        <div>Coolant level:
+        </div>
+        <div>Oil level:
+        </div>
+        <div>Battery:
+        </div>
+        <div>Load test results:
+        </div>
+        <div>In Cabin filter:
+        </div>
       </div>
 
       <h4>Transmission</h4>
-      <div>Any Codes:
+      <div class="col-xs-offset-1"> 
+        <div>Leaks:
+        </div>
+        <div>Clutch pedal:
+        </div>
+        <div>Clutch fluid:
+        </div>
       </div>
+
+      <h4>Interior</h4>
+      <div class="col-xs-offset-1"> 
+        <div>Interior light check:
+        </div>
+        <div>A/C system:
+        </div>
+        <div>A/C Drain:
+        </div>
+        <div>All vents switch:
+        </div>
+        <div>Power seat works:
+        </div>
+        <div>Hatch/Gas Door lever:
+        </div>
+        <div>Wipers and washers:
+        </div>
+      </div>
+
+
       <h4>Exterior</h4>
-      <div>Any Codes:
+      <div class="col-xs-offset-1"> 
+        <div>Front bumper:
+        </div>
+        <div>Front fenders:
+        </div>
+        <div>Left and Right doors:
+        </div>
+        <div>Left and Right Rear Quarters:
+        </div>
+        <div>Rear bumper:
+        </div>
       </div>
+
       <h4>Misc Notes</h4>
-      <div>Any Codes:
+      <div class="col-xs-offset-1"> 
+        <div>Notes:
+        </div>
       </div>
     </div>
   </div>
