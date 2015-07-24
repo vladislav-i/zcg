@@ -4,28 +4,41 @@
   <div class="col-xs-12">
     <div class="col-xs-3">
       <h4> Customer: {{ user.first }} {{ user.last }} </h4>
-      <div> Vin #:  <a href="#" editable-text="car.vin">{{ car.vin || 'empty' }}</a> </div>
-      <div>Prod date:  <a href="#" editable-text="car.prod">{{ car.prod || 'empty' }}</a></div>
-      <div>Mileage:  <a href="#" editable-text="car.mlgIn">{{ car.mlgIn || 'empty' }}</a></div>
-      <div>Model:  <a href="#" editable-text="car.model">{{ car.model || 'empty' }}</a></div>
+      <div> Vin #:  <a href="#" editable-text="currentJob.vin">{{ currentJob.vin || 'empty' }}</a> </div>
+      <div>Prod date:  <a href="#" editable-text="currentJob.prodDate">{{ currentJob.prodDate || 'empty' }}</a></div>
+      <div>Mileage:  <a href="#" editable-text="currentJob.mileage">{{ currentJob.mileage || 'empty' }}</a></div>
+      <div>Model:  <a href="#" editable-text="currentJob.model">{{ currentJob.model || 'empty' }}</a></div>
 
       <h4>Tech</h4>
-      <div> Tech Name:
+      <div> Tech Name: <a href="#" editable-text="currentJob.techName">{{ currentJob.techName || 'empty' }}</a>
       </div>
+
+      <div> Status: Not Started
+      </div>
+
+      <button type="button" class="btn btn-default" ng-click="updateJob(user)">Update Inspection</button>
+
+
     </div>
     <div class="col-xs-offset-1 col-xs-8">
       <h4 >Test drive</h4>
-      <div class="col-xs-offset-1">Any Codes: <a href="#" editable-text="car.codes">{{ car.codes || 'empty' }}</a>
+      <div class="col-xs-offset-1">Any Codes: <a href="#" editable-text="currentJob.anyCodes">{{ currentJob.anyCodes || 'empty' }}</a>
       </div>
 
-      <h4>Brakes - <select data-ng-options="o.name for o in options" data-ng-model="selectedOption"></select></h4>
+      <h4>Brakes -
+        <div class="btn-group btn-group-xs">
+          <button class="btn" ng-click="brakeType('brembo')">Brembo</button>
+          <button class="btn btn-default" ng-click="brakeType()">Non-Brembo</button>
+        </div>
+      </h4>
+
       <div class="col-xs-offset-1"> 
-        <div>Brake master: </div>
-        <div>Front Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{fRotor}}</span></div>
-        <div>Rear Rotors: <a href="#" editable-text="car.rearRotors">{{ car.rearRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{rRotor}}</span></div>
-        <div>Front Pads: <a href="#" editable-text="car.frontPads">{{ car.frontPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
-        <div>Rear Pads: <a href="#" editable-text="car.rearPads">{{ car.rearPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
-        <div>Notes: <a href="#" editable-text="car.brakeNotes">{{ car.brakeNotes || 'empty' }}</a></div>
+        <div>Brake master: <a href="#" editable-text="currentJob.bMaster">{{ currentJob.bMaster || 'empty' }}</a></div>
+        <div>Front Rotors: <a href="#" editable-text="currentJob.fRotors">{{ currentJob.fRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{fRotor}}</span></div>
+        <div>Rear Rotors: <a href="#" editable-text="currentJob.rRotors">{{ currentJob.rRotors || 'empty' }}</a><span class ="col-xs-offset-1">{{rRotor}}</span></div>
+        <div>Front Pads: <a href="#" editable-text="currentJob.fPads">{{ currentJob.fPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
+        <div>Rear Pads: <a href="#" editable-text="currentJob.rPads">{{ currentJob.rPads || 'empty' }}</a><span class ="col-xs-offset-1">Min thickness is 2mm</span></div>
+        <div>Notes: <a href="#" editable-text="currentJob.bNotes">{{ currentJob.bNotes || 'empty' }}</a></div>
       </div>
 
       <h4>Suspension</h4>
@@ -54,8 +67,6 @@
         <div>Fuel Dampner on intake:
         </div>
         <div>Valve cover gaskets:
-        </div>
-        <div>Coolant hoses:
         </div>
         <div>Drive belts:
         </div>
@@ -120,7 +131,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-  
+  </div>  
 </div>
