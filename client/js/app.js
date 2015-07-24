@@ -21,7 +21,7 @@ var zcgApp = angular.module('website', ['ngRoute','firebase', 'ui.router', 'xedi
       $urlRouterProvider.otherwise('/home');
   });
 
-function MainCtrl($scope, $firebaseArray, $firebaseObject) {
+function MainCtrl($scope, $firebaseArray, $firebaseObject, $interval) {
   //firebase
   var ref = new Firebase("https://zcg.firebaseio.com/ann");
   //display data
@@ -158,13 +158,11 @@ function MainCtrl($scope, $firebaseArray, $firebaseObject) {
       rBumper: job.rBumper || '',
       misNotes: job.misNotes || '' //all notes
     }
+
     $scope.updateJob = function() {
-      console.log($scope.currentJob);
       updateJob.update($scope.currentJob);
     }
   }
-
-  ///- - - WORK ORDER - - -///
 
   //brake type min thickness
   $scope.brakeType = function(val) {
