@@ -125,38 +125,38 @@ function MainCtrl($scope, $firebaseArray, $firebaseObject) {
       fPads: job.fPads || '',
       rPads: job.rPads || '',
       bNotes: job.bNotes || '',
-      sSprings: '', //suspension
-      fControlArms: '',
-      fTires: '',
-      rTires: '',
-      rSuspension: '',
-      efiConnections: '', //Engine Room
-      coolantHoses: '',
-      psHoses: '',
-      fuelDampner: '',
-      valveCover: '',
-      driveBelts: '',
-      coolantLevel: '',
-      oilLevel: '',
-      battery: '',
-      loadTest: '',
-      cabinFilter: '',
-      tLeaks: '', //transmission
-      clutchPedal: '',
-      clutchFluid: '',
-      interiorLights: '', //interior
-      acSystem: '',
-      acDrain: '',
-      ventSwitch: '',
-      powerSeat: '',
-      gasDoor: '',
-      wiperWash: '',
-      fBumper: '',  //exterior
-      fFenders: '',
-      doors: '',
-      rearQuarters: '',
-      rBumper: '',
-      misNotes: '' //all notes
+      sSprings: job.sSprings || '', //suspension
+      fArms: job.fArms || '',
+      fTires: job.fTires || '',
+      rTires: job.rTires || '',
+      rSus: job.rSus || '',
+      efi: job.efi || '', //Engine Room
+      coHoses: job.coHoses || '',
+      psHoses: job.psHoses || '',
+      fuelDampner: job.fuelDampner || '',
+      valveCover: job.valveCover || '',
+      driveBelts: job.driveBelts || '',
+      coolantLevel: job.coolantLevel || '',
+      oilLevel: job.oilLevel || '',
+      battery: job.battery || '',
+      loadTest: job.loadTest || '',
+      cabinFilter: job.cabinFilter || '',
+      tLeaks: job.tLeaks || '', //transmission
+      clutchPedal: job.clutchPedal || '',
+      clutchFluid: job.clutchFluid || '',
+      interiorLights: job.interiorLights || '', //interior
+      acSystem: job.acSystem || '',
+      acDrain: job.acDrain || '',
+      ventSwitch: job.ventSwitch || '',
+      powerSeat: job.powerSeat || '',
+      gasDoor: job.gasDoor || '',
+      wiperWash: job.wiperWash || '',
+      fBumper: job.fBumper || '',  //exterior
+      fFenders: job.fFenders || '',
+      doors: job.doors || '',
+      rearQuarters: job.rearQuarters || '',
+      rBumper: job.rBumper || '',
+      misNotes: job.misNotes || '' //all notes
     }
     $scope.updateJob = function() {
       console.log($scope.currentJob);
