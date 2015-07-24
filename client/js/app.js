@@ -5,8 +5,8 @@ var zcgApp = angular.module('website', ['ngRoute','firebase', 'ui.router', 'xedi
         url: '/home',
         templateUrl:'partials/home.html'
       })
-      .state('about', {
-        url:'/about',
+      .state('jobs', {
+        url:'/jobs',
         views: {
           '': { templateUrl:'partials/about.html'},
           "workOrder@about": {
